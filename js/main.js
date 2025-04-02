@@ -37,18 +37,6 @@ let currentIndex = 0;
 
 const section = document.querySelector('#home');
 const contactUsButton = document.querySelector('#contact-us');
-
-const updateBackground = () => {
-    section.classList.add('transition-all', 'duration-1000', 'ease-in-out');
-    section.style.backgroundImage = backgrounds[currentIndex].image;
-    
-    setTimeout(() => section.classList.remove('transition-all', 'duration-1000', 'ease-in-out'), 1000);
-};
-
-setInterval(() => {
-    currentIndex = (currentIndex + 1) % backgrounds.length; 
-    updateBackground();
-}, 5000); 
 const header = document.getElementById("main-header");
     const homeSection = document.getElementById("home");
 
