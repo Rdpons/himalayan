@@ -10,12 +10,13 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
     <link rel="icon" href="./image/logo-himalayan.png" type="image/icon type" class="w-30">
-    <style></style>
 </head>
 <body class="antialiased">
     <header id="main-header" class="w-full bg-transparent z-50 fixed top-0 left-0 right-0 transition-transform duration-300">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <img src="./image/logo.png" class="h-12 w-auto">
+            <div class="text-amber-500 font-bold text-2xl">
+                <img src="./image/logo.png" alt="" style="height: 70px;">
+            </div>
             <div class="lg:hidden flex items-center">
                 <button id="burger-icon" class="text-white">
                     <i class="bx bx-menu text-2xl"></i>
@@ -24,60 +25,91 @@
             <nav id="menu" class="hidden lg:flex space-x-10 text-white font-medium">
                 <a href="#home" id="home-link" class="hover:text-yellow-400 transition">Home</a>
                 <a href="#about" id="about-link" class="hover:text-yellow-400 transition">About</a>
-                <a href="#product" id="product-link" class="hover:text-yellow-400 transition">Product</a>
+                <a href="#product" id="menu-link" class="hover:text-yellow-400 transition">Menu</a>
                 <a href="#contact" id="contact-link" class="hover:text-yellow-400 transition">Contact</a>
             </nav>
         </div>
     </header>
-    <div id="mobile-menu" class="lg:hidden fixed top-0 right-0 w-64 h-full bg-[#2C1412] bg-opacity-60 flex flex-col items-center justify-center z-50 space-y-4 text-white text-xl">
+    <div id="mobile-menu" class="lg:hidden fixed top-0 right-0 w-64 h-full bg-[#2C1412] bg-opacity-60 flex flex-col items-center justify-center z-50 space-y-4 text-white text-xl hidden">
         <a href="#home" class="hover:text-yellow-400">Home</a>
         <a href="#about" class="hover:text-yellow-400">About</a>
-        <a href="#product" class="hover:text-yellow-400">Product</a>
+        <a href="#product" class="hover:text-yellow-400">Menu</a>
         <a href="#contact" class="hover:text-yellow-400">Contact</a>
         <button id="close-menu"></button>
     </div>
     
-    <!-- ari ang home -->
-    <section id="home" class="relative h-screen bg-cover bg-center flex items-center px-6 transition-all duration-1000 ease-in-out" 
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen bg-cover bg-center flex items-center px-6 transition-all duration-1000 ease-in-out bg-black/80" 
         style="background-image: url('./image/bg.jpg');">
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
         <div class="absolute inset-0 flex items-center justify-center text-center">
             <div class="max-w-4xl px-6">
-                <h1 class="text-5xl md:text-7xl text-[var(--color-cream)] font-light tracking-wider mb-8 leading-tight">
-                    Himalayan Dumplings
+                <h1 class="text-5xl md:text-7xl text-white font-light tracking-wider mb-4 leading-tight">
+                    Where Coffee Meets
                 </h1>
-                <p class="text-xl text-[var(--color-white)] tracking-wide mb-12 max-w-2xl mx-auto">
+                <div class="text-5xl md:text-7xl text-yellow-400 font-light italic mb-8 himalayan-flavor">
+                    Himalayan Flavor
+                </div>
+                <p class="text-xl text-white tracking-wide mb-12 max-w-3xl mx-auto">
                     Experience the taste of Tibet in every bite
                 </p>
-                <a href="#menu" id="learn-more" class="inline-block bg-[var(--color-cream)] text-[#000] px-10 py-4 text-sm tracking-wider uppercase hover:bg-[var(--color-bean-dark)] hover:text-[var(--color-white)] transition-all duration-500">
-                    Explore Flavors
-                </a>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#" id="learn-more"class="inline-block bg-amber-700 text-white px-10 py-4 text-sm tracking-wider uppercase hover:bg-amber-800 transition-all duration-300 rounded-full">
+                        Explore Menu
+                    </a>
+                </div>
             </div>
         </div>
     </section>
     <!-- ari ang about -->
-    <section id="about" class="py-16 bg-white text-center">
+    <section id="about" class="py-16 bg-[#f8f5e6] text-center">
         <div class="container mx-auto px-6" data-aos="fade-up">
-            <h2 class="text-3xl text-[#a96631]">About Us</h2>
-            <p class="mt-4 text-black text-sm text-center max-w-3xl mx-auto">🥟✨Come and experience a little piece of the Himalayas on your plate bring a friend for the perfect dumpling date!🍜🥢</p>
+            <h2 class="text-4xl font-bold text-gray-800 mb-2">Our Story</h2>
+            <div class="w-24 h-1 bg-amber-600 mx-auto mb-10"></div>
+            <div class="mt-8 hidden md:flex md:flex-row justify-between items-center gap-8">
+                <div class="w-1/2 relative" data-aos="fade-right">
+                    <img src="./image/Coffe.webp" alt="Cafe Interior" class="w-full rounded-lg shadow-lg object-cover">
+                    <div class="absolute -bottom-12 -right-8 w-1/2 z-10">
+                        <img src="./image/image1.jpg" alt="Our Dumplings" class="w-full rounded-lg shadow-lg border-4 border-[#f8f5e6]">
+                    </div>
+                </div>
+                
+                <div class="w-2/5 text-left" data-aos="fade-left">                    
+                    <p class="mt-2 text-gray-700">
+                        Himalayan Dumplings Café, we bring you the authentic flavors of Tibetan Momos(Dumplings) right here in the Philippines. Our handcrafted dumplings are made with love and tradition, offering a delightful fusion of spices, flavors, and culture.                    
+                    </p>
+                    <p class="mt-4 mb-4 text-gray-700">
+                        Whether you're a longtime momo lover or trying them for the first time, we invite you to savor the comforting goodness of this beloved Himalayan delicacy. As we prepare to open our doors soon, we can’t wait to share this experience with you.                    
+                    </p>
+                    <h3 class="text-sm text-amber-700 italic">🥟✨Come and experience a little piece of the Himalayas on your plate bring a friend for the perfect dumpling date!🍜🥢</h3>    
 
-            <div class="mt-8 flex flex-col md:flex-row justify-center items-center gap-8">
-                <img src="./image/image1.jpg" 
-                    alt="About Us Image" class="w-full max-w-md rounded-lg shadow-lg object-cover" data-aos="fade-right">
-                <div class="max-w-md text-black" data-aos="fade-left">
-                    <p class="mt-2 text-left text-lg">At Himalayan Dumplings Café, we bring you the authentic flavors of Tibetan Momos(Dumplings) right here in the Philippines. Our handcrafted dumplings are made with love and tradition, offering a delightful fusion of spices, flavors, and culture.</p>
                 </div>
             </div>
-            <div class="hidden sm:flex flex-col items-center my-6 space-y-2" data-aos="fade-up">
-                <div class="w-1 h-20 bg-[#a96631]"></div>
-            </div>
-            <div class="flex sm:hidden w-2 h-20 bg-[#a96631] mx-auto my-6" data-aos="fade-left"></div>
-            <div class="mt-8 flex flex-col md:flex-row-reverse justify-center items-center gap-8">
-                <img src="./image/Coffe.webp" alt="About Us Image" class="w-full max-w-md rounded-lg shadow-lg object-cover" data-aos="fade-right">
-                <div class="max-w-md text-black text-left text-lg" data-aos="fade-left">
-                    <p class="mt-2 text-md">Whether you're a longtime momo lover or trying them for the first time, we invite you to savor the comforting goodness of this beloved Himalayan delicacy.
-                        As we prepare to open our doors soon, we can’t wait to share this experience with you.</p>
+            <div class="md:hidden">
+                <div class="relative w-full mb-8 overflow-hidden" data-aos="fade-up" id="imageSlider">
+                    <div class="flex slider-container transition-transform duration-300 ease-in-out">
+                        <div class="w-full flex-shrink-0">
+                            <img src="./image/Coffe.webp" alt="Cafe Interior" class="w-full rounded-lg shadow-lg">
+                        </div>
+                        <div class="w-full flex-shrink-0">
+                            <img src="./image/image1.jpg" alt="Our Dumplings" class="w-full rounded-lg shadow-lg">
+                        </div>
+                    </div>
+                    <div class="flex justify-center mt-4">
+                        <button class="slider-dot w-3 h-3 rounded-full bg-amber-600 mx-1 active" onclick="moveSlide(0)"></button>
+                        <button class="slider-dot w-3 h-3 rounded-full bg-gray-300 mx-1" onclick="moveSlide(1)"></button>
+                    </div>
                 </div>
-            </div>  
+                <div class="text-left px-2" data-aos="fade-up">
+                    <p class="mt-2 text-gray-700">
+                        Himalayan Dumplings Café, we bring you the authentic flavors of Tibetan Momos(Dumplings) right here in the Philippines. Our handcrafted dumplings are made with love and tradition, offering a delightful fusion of spices, flavors, and culture.                    
+                    </p>
+                    <p class="mt-4 mb-10 text-gray-700">
+                        Whether you're a longtime momo lover or trying them for the first time, we invite you to savor the comforting goodness of this beloved Himalayan delicacy. As we prepare to open our doors soon, we can’t wait to share this experience with you.                    
+                    </p>
+                    <h3 class="text-sm text-amber-700 italic text-center">🥟✨Come and experience a little piece of the Himalayas on your plate bring a friend for the perfect dumpling date!🍜🥢</h3>    
+                </div>
+            </div>
         </div>
     </section>
     <section class="relative max-w-7xl mx-auto px-6 py-16" data-aos="fade-right">
@@ -117,139 +149,119 @@
         </div>
     </section>
     <!-- Momo's Products -->
-    <section id="product" class="py-24" style="background-color: var(--color-cream);">
-        <div class="max-w-7xl mx-auto px-8">
-            <div class="text-center mb-16" data-aos="fade-left">
-                <h2 class="text-4xl font-light tracking-wider" style="color: var(--color-bean-dark);">
-                    Momo's Products
-                </h2>
-                <p style="color: var(--color-bean-medium);" class="max-w-2xl mx-auto text-lg tracking-wider">
-                    Meticulously crafted offerings that tell a story
-                </p>
+<section id="product" class="py-24" style="background-color: var(--color-cream);">
+    <div class="max-w-7xl mx-auto px-8">
+        <div class="text-center mb-16" data-aos="fade-left">
+            <h2 class="text-4xl font-light tracking-wider" style="color: var(--color-bean-dark);">
+                Momo's Products
+            </h2>
+            <p style="color: var(--color-bean-medium);" class="max-w-2xl mx-auto text-lg tracking-wider">
+                Meticulously crafted offerings that tell a story
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-12" data-aos="fade-right">
+            <div class="group relative overflow-hidden rounded-2xl shadow-lg">
+                <img src="./image/image3.jpeg" alt="image5" class="w-contain h-96 object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300" style="background-color: rgba(74,44,42,0);">
+                </div>
+                <div class="absolute bottom-0 w-full p-6 transform translate-y-0 group-hover:translate-y-0 transition-all duration-300" style="background: linear-gradient(to top, var(--color-bean-dark), transparent);">
+                    <h3 class="text-2xl mb-2 font-light tracking-wider text-[var(--color-cream)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">Steamed Momo's</h3>
+                    <p class="text-[var(--color-white)] text-sm tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300">Steamed momo's are soft, flavorful dumplings steamed to perfection.</p>
+                </div>
+            </div>
+
+            <div class="group relative overflow-hidden rounded-2xl shadow-lg">
+                <img src="./image/image4.png" alt="image3" class="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300" style="background-color: rgba(74,44,42,0);">
+                </div>
+                <div class="absolute bottom-0 w-full p-6 transform translate-y-0 group-hover:translate-y-0 transition-all duration-300" style="background: linear-gradient(to top, var(--color-bean-dark), transparent);">
+                    <h3 class="text-2xl mb-2 font-light tracking-wider text-[var(--color-cream)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">Fried Momo's</h3>
+                    <p class="text-[var(--color-white)] text-sm tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300">Fried momo's are crispy, golden dumplings, offering a deliciously crunchy bite.</p>
+                </div>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-12" data-aos="fade-right">
-                <div class="group relative overflow-hidden rounded-2xl shadow-lg">
-                    <img src="./image/image3.jpeg" alt="image5" class="w-contain h-96 object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0" style="background-color: rgba(74,44,42,0.5); opacity: 0;" 
-                         :class="{'opacity-100': hover}"
-                         @mouseenter="hover = true"
-                         @mouseleave="hover = false">
-                    </div>
-                    <div class="absolute bottom-0 w-full p-6" style="background: linear-gradient(to top, var(--color-bean-dark), transparent);">
-                        <h3 class="text-2xl mb-2 font-light tracking-wider text-[var(--color-cream)]">Steamed Momo's</h3>
-                        <p class="text-[var(--color-white)] text-sm tracking-wider">Steamed momo's are soft, flavorful dumplings steamed to perfection.</p>
-                    </div>
+            <div class="group relative overflow-hidden rounded-2xl shadow-lg">
+                <img src="./image/afghani.jpeg" alt="image1" class="w-full h-96 object-cover object-center duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300" style="background-color: rgba(74,44,42,0);">
                 </div>
-
-                <div class="group relative overflow-hidden rounded-2xl shadow-lg">
-                    <img src="./image/image4.png" alt="image3" class="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0" style="background-color: rgba(74,44,42,0.5); opacity: 0;" 
-                         :class="{'opacity-100': hover}"
-                         @mouseenter="hover = true"
-                         @mouseleave="hover = false">
-                    </div>
-                    <div class="absolute bottom-0 w-full p-6" style="background: linear-gradient(to top, var(--color-bean-dark), transparent);">
-                        <h3 class="text-2xl mb-2 font-light tracking-wider text-[var(--color-cream)]">Fried Momo's</h3>
-                        <p class="text-[var(--color-white)] text-sm tracking-wider">Fried momo's are crispy, golden dumplings, offering a deliciously crunchy bite.</p>
-                    </div>
-                </div>
-                <div class="group relative overflow-hidden rounded-2xl shadow-lg">
-                    <img src="./image/afghani.jpeg" alt="image1" class="w-full h-96 object-cover object-center duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0" style="background-color: rgba(74,44,42,0.5); opacity: 0;" 
-                         :class="{'opacity-100': hover}"
-                         @mouseenter="hover = true"
-                         @mouseleave="hover = false">
-                    </div>
-                    <div class="absolute bottom-0 w-full p-6" style="background: linear-gradient(to top, var(--color-bean-dark), transparent);">
-                        <h3 class="text-2xl mb-2 font-light tracking-wider text-[var(--color-cream)]">Afghani Momo's</h3>
-                        <p class="text-[var(--color-white)] text-sm tracking-wider">Afghani momo's are rich, creamy dumplings, topped with a luscious, tangy & creamy sauce.</p>
-                    </div>
-                </div>
-                <div class="group relative lg:left-[200px] sm:left-0 overflow-hidden rounded-2xl shadow-lg">
-                    <img src="./image/malai.jpeg" alt="image1" class="w-full h-96 object-cover object-center duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0" style="background-color: rgba(74,44,42,0.5); opacity: 0;" 
-                         :class="{'opacity-100': hover}"
-                         @mouseenter="hover = true"
-                         @mouseleave="hover = false">
-                    </div>
-                    <div class="absolute bottom-0 w-full p-6" style="background: linear-gradient(to top, var(--color-bean-dark), transparent);">
-                        <h3 class="text-2xl mb-2 font-light tracking-wider text-[var(--color-cream)]">Malai Tikka Momo's</h3>
-                        <p class="text-[var(--color-white)] text-sm tracking-wider">Malai Tikka momo's are tender dumplingss, coated in a creamy, spied malai sauce for a rich flavor.</p>
-                    </div>
-                </div><div class="group relative lg:left-[200px] sm:left-0 overflow-hidden rounded-2xl shadow-lg">
-                    <img src="./image/honey.jpeg" alt="image1" class="w-full h-96 object-cover object-center duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0" style="background-color: rgba(74,44,42,0.5); opacity: 0;" 
-                         :class="{'opacity-100': hover}"
-                         @mouseenter="hover = true"
-                         @mouseleave="hover = false">
-                    </div>
-                    <div class="absolute bottom-0 w-full p-6" style="background: linear-gradient(to top, var(--color-bean-dark), transparent);">
-                        <h3 class="text-2xl mb-2 font-light tracking-wider text-[var(--color-cream)]">Honey Chilli Momo's</h3>
-                        <p class="text-[var(--color-white)] text-sm tracking-wider">Honey Chilli momo's are crispy dumplings tossed in a sweet and spicy honey-chili sauce.</p>
-                    </div>
+                <div class="absolute bottom-0 w-full p-6 transform translate-y-0 group-hover:translate-y-0 transition-all duration-300" style="background: linear-gradient(to top, var(--color-bean-dark), transparent);">
+                    <h3 class="text-2xl mb-2 font-light tracking-wider text-[var(--color-cream)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">Afghani Momo's</h3>
+                    <p class="text-[var(--color-white)] text-sm tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300">Afghani momo's are rich, creamy dumplings, topped with a luscious, tangy & creamy sauce.</p>
                 </div>
             </div>
-    </section>
-
-    <!-- Coffee Products -->
-    <section class="py-24" style="background-color: var(--color-bean-dark);">
-        <div class="max-w-7xl mx-auto px-8">
-            <div class="text-center mb-16" data-aos="fade-left">
-                <h2 class="text-4xl font-light tracking-wider text-[var(--color-cream)]">
-                    Coffee Products
-                </h2>
-                <p class="text-[var(--color-white)] max-w-2xl mx-auto text-lg tracking-wider text-[var(--color-foam)]">
-                    Every cup tells a story, capture yours with us.
-                </p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-12" data-aos="fade-right">
-                <div class="group relative overflow-hidden rounded-2xl shadow-lg">
-                    <img src="./image/cappucino-c-1.jpg" alt="image5" class="w-full h-96 object-cover object-center transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0" style="background-color: rgba(74,44,42,0.5); opacity: 0;" 
-                         :class="{'opacity-100': hover}"
-                         @mouseenter="hover = true"
-                         @mouseleave="hover = false">
-                    </div>
-                    <div class="absolute bottom-0 w-full p-6" style="background: linear-gradient(to top, var(--color-bean-dark), transparent);">
-                        <h3 class="text-2xl mb-2 font-light tracking-wider text-[var(--color-cream)]">Cappuccino</h3>
-                        <p class="text-[var(--color-white)] text-sm tracking-wider">Cappuccino is a latte made with more foam than steamed milk.</p>
-                    </div>
+            
+            <div class="group relative lg:left-[200px] sm:left-0 overflow-hidden rounded-2xl shadow-lg">
+                <img src="./image/malai.jpeg" alt="image1" class="w-full h-96 object-cover object-center duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300" style="background-color: rgba(74,44,42,0);">
                 </div>
-
-                <div class="group relative overflow-hidden rounded-2xl shadow-lg">
-                    <img src="./image/americano-c-1.jpg" alt="image3" class="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0" style="background-color: rgba(74,44,42,0.5); opacity: 0;" 
-                         :class="{'opacity-100': hover}"
-                         @mouseenter="hover = true"
-                         @mouseleave="hover = false">
-                    </div>
-                    <div class="absolute bottom-0 w-full p-6" style="background: linear-gradient(to top, var(--color-bean-dark), transparent);">
-                        <h3 class="text-2xl mb-2 font-light tracking-wider text-[var(--color-cream)]">Americano</h3>
-                        <p class="text-[var(--color-white)] text-sm tracking-wider">Americano consists of an espresso shot diluted in hot water.</p>
-                    </div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-2xl shadow-lg">
-                    <img src="./image/espresso.jpg" alt="image1" class="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0" style="background-color: rgba(74,44,42,0.5); opacity: 0;" 
-                         :class="{'opacity-100': hover}"
-                         @mouseenter="hover = true"
-                         @mouseleave="hover = false">
-                    </div>
-                    <div class="absolute bottom-0 w-full p-6" style="background: linear-gradient(to top, var(--color-bean-dark), transparent);">
-                        <h3 class="text-2xl mb-2 font-light tracking-wider text-[var(--color-cream)]">Espresso</h3>
-                        <p class="text-[var(--color-white)] text-sm tracking-wider">An espresso shot used as the foundation of most coffee drinks.</p>
-                    </div>
+                <div class="absolute bottom-0 w-full p-6 transform translate-y-0 group-hover:translate-y-0 transition-all duration-300" style="background: linear-gradient(to top, var(--color-bean-dark), transparent);">
+                    <h3 class="text-2xl mb-2 font-light tracking-wider text-[var(--color-cream)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">Malai Tikka Momo's</h3>
+                    <p class="text-[var(--color-white)] text-sm tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300">Malai Tikka momo's are tender dumplingss, coated in a creamy, spied malai sauce for a rich flavor.</p>
                 </div>
             </div>
-            <div class="text-center mt-12">
-                <a href="#" class="inline-block text-[var(--color-cream)] border border-[var(--color-cream)] px-10 py-4 text-sm tracking-wider hover:bg-[var(--color-cream)] hover:text-[var(--color-bean-dark)] transition-all">
-                    #himilayandumplings
-                </a>
+            
+            <div class="group relative lg:left-[200px] sm:left-0 overflow-hidden rounded-2xl shadow-lg">
+                <img src="./image/honey.jpeg" alt="image1" class="w-full h-96 object-cover object-center duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300" style="background-color: rgba(74,44,42,0);">
+                </div>
+                <div class="absolute bottom-0 w-full p-6 transform translate-y-0 group-hover:translate-y-0 transition-all duration-300" style="background: linear-gradient(to top, var(--color-bean-dark), transparent);">
+                    <h3 class="text-2xl mb-2 font-light tracking-wider text-[var(--color-cream)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">Honey Chilli Momo's</h3>
+                    <p class="text-[var(--color-white)] text-sm tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300">Honey Chilli momo's are crispy dumplings tossed in a sweet and spicy honey-chili sauce.</p>
+                </div>
             </div>
         </div>
-    </section>
+</section>
+
+<!-- Coffee Products -->
+<section class="py-24" style="background-color: var(--color-bean-dark);">
+    <div class="max-w-7xl mx-auto px-8">
+        <div class="text-center mb-16" data-aos="fade-left">
+            <h2 class="text-4xl font-light tracking-wider text-[var(--color-cream)]">
+                Coffee Products
+            </h2>
+            <p class="text-[var(--color-white)] max-w-2xl mx-auto text-lg tracking-wider text-[var(--color-foam)]">
+                Every cup tells a story, capture yours with us.
+            </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-12" data-aos="fade-right">
+            <div class="group relative overflow-hidden rounded-2xl shadow-lg">
+                <img src="./image/cappucino-c-1.jpg" alt="image5" class="w-full h-96 object-cover object-center transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300" style="background-color: rgba(74,44,42,0);">
+                </div>
+                <div class="absolute bottom-0 w-full p-6 transform translate-y-0 group-hover:translate-y-0 transition-all duration-300" style="background: linear-gradient(to top, var(--color-bean-dark), transparent);">
+                    <h3 class="text-2xl mb-2 font-light tracking-wider text-[var(--color-cream)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">Cappuccino</h3>
+                    <p class="text-[var(--color-white)] text-sm tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300">Cappuccino is a latte made with more foam than steamed milk.</p>
+                </div>
+            </div>
+
+            <div class="group relative overflow-hidden rounded-2xl shadow-lg">
+                <img src="./image/americano-c-1.jpg" alt="image3" class="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300" style="background-color: rgba(74,44,42,0);">
+                </div>
+                <div class="absolute bottom-0 w-full p-6 transform translate-y-0 group-hover:translate-y-0 transition-all duration-300" style="background: linear-gradient(to top, var(--color-bean-dark), transparent);">
+                    <h3 class="text-2xl mb-2 font-light tracking-wider text-[var(--color-cream)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">Americano</h3>
+                    <p class="text-[var(--color-white)] text-sm tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300">Americano consists of an espresso shot diluted in hot water.</p>
+                </div>
+            </div>
+
+            <div class="group relative overflow-hidden rounded-2xl shadow-lg">
+                <img src="./image/espresso.jpg" alt="image1" class="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300" style="background-color: rgba(74,44,42,0);">
+                </div>
+                <div class="absolute bottom-0 w-full p-6 transform translate-y-0 group-hover:translate-y-0 transition-all duration-300" style="background: linear-gradient(to top, var(--color-bean-dark), transparent);">
+                    <h3 class="text-2xl mb-2 font-light tracking-wider text-[var(--color-cream)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">Espresso</h3>
+                    <p class="text-[var(--color-white)] text-sm tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300">An espresso shot used as the foundation of most coffee drinks.</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-12">
+            <a href="#" class="inline-block text-[var(--color-cream)] border border-[var(--color-cream)] px-10 py-4 text-sm tracking-wider hover:bg-[var(--color-cream)] hover:text-[var(--color-bean-dark)] transition-all">
+                #himilayandumplings
+            </a>
+        </div>
+    </div>
+</section>
     <!-- ari ang tiil -->
     <footer id="contact" class="py-2" style="background-color: var(--color-white);">
         <div class="max-w-7xl mx-auto px-8 text-center">
@@ -260,7 +272,8 @@
                 Dumplings & coffee, because happiness comes in pairs.
             </p>
             <div class="flex justify-center space-x-6 mb-8">
-                <a href="https://www.facebook.com/people/Himalayan-Dumplings/61572193812724/" style="color: var(--color-bean-medium);" class="hover:text-[var(--color-bean-dark)] transition-colors text-sm tracking-wider uppercase">Facebook  </a>           
+                <a href="https://www.facebook.com/people/Himalayan-Dumplings/61572193812724/" style="color: var(--color-bean-medium);" 
+                class="hover:text-[var(--color-bean-dark)] transition-colors text-sm tracking-wider uppercase">Facebook  </a>           
             </div>
             <p style="color: var(--color-bean-medium);" class="text-sm tracking-wider">
                 © 2025 Himalayan Dumplings. All Rights Reserved.
