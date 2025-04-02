@@ -33,12 +33,6 @@ document.addEventListener('click', (e) => {
         mobileMenu.classList.remove('show');
     }
 });
-// const backgrounds = [
-//     {image: 'url("bg.jpg")',},
-//     {image: 'url("https://i.pinimg.com/736x/a3/69/df/a369dfe059e9f517b75305b1e99378e3.jpg")',},
-//     {image: 'url("image2.jpg")',},
-// ];
-
 let currentIndex = 0;
 
 const section = document.querySelector('#home');
@@ -117,9 +111,65 @@ const header = document.getElementById("main-header");
             });
         });
     });
-    
-
-
+    document.addEventListener('DOMContentLoaded', function() {
+        const slider = document.querySelector('.slider-container');
+        const sliderElement = document.getElementById('imageSlider');
+        
+        if (!sliderElement) return;
+        
+        let currentIndex = 0;
+        const slideCount = document.querySelectorAll('.slider-container > div').length;
+        
+        window.moveSlide = function(index) {
+            currentIndex = index;
+            updateSliderPosition();
+        };
+        
+        function updateSliderPosition() {
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+            document.querySelectorAll('.slider-dot').forEach((dot, i) => {
+                if (i === currentIndex) {
+                    dot.classList.add('active');
+                    dot.classList.remove('bg-gray-300');
+                    dot.classList.add('bg-amber-600');
+                } else {
+                    dot.classList.remove('active');
+                    dot.classList.remove('bg-amber-600');
+                    dot.classList.add('bg-gray-300');
+                }
+            });
+        }
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        sliderElement.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        
+        sliderElement.addEventListener('touchend', function(e) {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+        
+        function handleSwipe() {
+            const swipeThreshold = 50; 
+            const diff = touchStartX - touchEndX;
+            
+            if (Math.abs(diff) < swipeThreshold) return;
+            
+            if (diff > 0) {
+                if (currentIndex < slideCount - 1) {
+                    currentIndex++;
+                    updateSliderPosition();
+                }
+            } else {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateSliderPosition();
+                }
+            }
+        }
+    });
 
 
 
