@@ -10,6 +10,11 @@
             margin: 0;
             padding: 0;
             overflow-x: hidden;
+            font-family: 'Poppins', sans-serif;
+
+        }
+        h1, h2, .himalayan-flavor {
+            font-family: 'Playfair Display', serif;
         }
         #mobile-menu {
         display: none;
